@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   NOTE: --color-base is intentionally avoided — it would
+   conflict with Tailwind's built-in `text-base` font-size
+   utility. We use --color-bgc (bg-bgc) instead.
+───────────────────────────────────────────────────────── */
+:root {
+  --theme-bg-base: #FFFFFF;
+  --theme-text-main: #0F172A;
+  --theme-bg-surface: rgba(15, 23, 42, 0.03);
+  --theme-bdr: rgba(15, 23, 42, 0.08);
+  --theme-muted: rgba(15, 23, 42, 0.72);
+  --theme-inverted-bg: #0F172A;
+  --theme-inverted-text: #FFFFFF;
+}
+
+.dark {
+  --theme-bg-base: #0F172A;
+  --theme-text-main: #F8FAFC;
+  --theme-bg-surface: rgba(255, 255, 255, 0.04);
+  --theme-bdr: rgba(255, 255, 255, 0.1);
+  --theme-muted: rgba(255, 255, 255, 0.6);
+  --theme-inverted-bg: #FFFFFF;
+  --theme-inverted-text: #0F172A;
+}
+
+@theme {
+  --color-bg-base:           var(--theme-bg-base);
+  --color-primary-brand:     #FF6B6B;
+  --color-secondary-brand:   #4ECDC4;
+  --color-text-main:         var(--theme-text-main);
+  --color-bg-surface:        var(--theme-bg-surface);
+  --color-inverted-bg:       var(--theme-inverted-bg);
+  --color-inverted-text:     var(--theme-inverted-text);
+
+  --color-bgc:          var(--color-bg-base);
+  --color-surface:      var(--color-bg-surface);
+  --color-bdr:          var(--theme-bdr);
+  --color-ink:          var(--color-text-main);
+  --color-muted:        var(--theme-muted);
+  --color-accent:       var(--color-primary-brand);
+  --color-accent-dark:  #FA5A5A;
+  --color-accent-soft:  rgba(255, 107, 107, 0.10);
+  --color-secondary:    var(--color-secondary-brand);
+
+  --font-display: 'Syne', sans-serif;
+  --font-sans:    'Inter', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+}
+
+@layer base {
+  /* ─── Base ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--color-bgc);
+    color: var(--color-ink);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── Custom cursor: hide native ─── */
+  * { cursor: none !important; }
+}
+
+/* ─── Ghost text outline ─── */
+.text-ghost {
+  -webkit-text-stroke: 1.5px var(--color-ink);
+  color: transparent;
+}
+
+.hero-heading-gradient {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ─── Word reveal: clip container ─── */
+.clip-word { overflow: hidden; display: block; }
+
+/* ─── Section eyebrow label ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.proj-card-inner {
+  transition: transform 0.4s cubic-bezier(0.24, 1, 0.38, 1), box-shadow 0.4s ease;
+}
+@media (hover: hover) and (min-width: 768px) {
+  .proj-card:hover .proj-card-inner {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 90px rgba(109, 148, 197, 0.18);
+  }
+  .proj-card:hover::before {
+    opacity: 1;
+  }
+}
+.proj-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 20%, var(--color-accent-soft), transparent 32%);
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.4s ease;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+@media (hover: hover) and (min-width: 768px) {
+  .proj-card:hover::before {
+    transform: scale(1.04);
+  }
+}
+
+/* ─── Marquee ─── */
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  will-change: transform;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-bgc); }
+::-webkit-scrollbar-thumb { background: rgba(44, 62, 80, 0.2); border-radius: 4px; }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Full Liquid Glass Card Style ─── */
+.glass-card-liquid {
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    0 15px 35px rgba(15, 23, 42, 0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+/* Liquid Sheen sweep reflection */
+.glass-card-liquid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 70%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glass-card-liquid:hover::before {
+  left: 150%;
+  transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-liquid:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.65),
+    0 25px 50px rgba(15, 23, 42, 0.1);
+}
+
