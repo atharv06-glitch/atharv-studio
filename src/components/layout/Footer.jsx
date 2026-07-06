@@ -1,3 +1,5 @@
+import { Mail, Phone } from 'lucide-react';
+
 const SERVICES = ['App Development','Web Development','UI/UX Design','Shopify','WordPress','Digital Strategy']
 const COMPANY  = ['About','Work','Process','Contact']
 const SOCIALS  = [{ label:'Twitter', icon:'X' },{ label:'LinkedIn', icon:'in' },{ label:'Instagram', icon:'IG' },{ label:'Dribbble', icon:'Dr' }]
@@ -52,11 +54,21 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-widest text-inverted-text/60 mb-5">Get in Touch</h4>
-            <a href="mailto:hello@atharvstudio.com" className="text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 block mb-3">
-              hello@atharvstudio.com
+            <a href="mailto:amaanbagwan027@gmail.com" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
+              <Mail className="w-4 h-4 shrink-0" />
+              <span>amaanbagwan027@gmail.com</span>
             </a>
-            <a href="tel:+910000000000" className="text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 block">
-              +91 00000 00000
+            <a href="mailto:jangamatharv93@gmail.com" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
+              <Mail className="w-4 h-4 shrink-0" />
+              <span>jangamatharv93@gmail.com</span>
+            </a>
+            <a href="tel:+918623035107" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
+              <Phone className="w-4 h-4 shrink-0" />
+              <span>+91 8623035107</span>
+            </a>
+            <a href="tel:+919359492394" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200">
+              <Phone className="w-4 h-4 shrink-0" />
+              <span>+91 9359492394</span>
             </a>
             <div className="mt-8 p-4 border border-inverted-text/15 rounded-xl bg-inverted-text/10 backdrop-blur-sm">
               <p className="text-xs text-inverted-text/70 font-mono mb-2">Current Status</p>
