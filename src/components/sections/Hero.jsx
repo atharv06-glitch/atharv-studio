@@ -35,21 +35,6 @@ export default function Hero() {
           { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out' },
           '-=0.3'
         )
-        .fromTo('.hero-scroll',
-          { opacity: 0 },
-          { opacity: 1, duration: 0.5, ease: 'power2.out' },
-          '-=0.2'
-        )
-
-      /* Subtle pulse on scroll line */
-      gsap.to('.hero-scroll-line', {
-        scaleY: 0.4,
-        duration: 1,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut',
-        transformOrigin: 'top center',
-      })
     }, heroRef)
 
     return () => ctx.revert()
@@ -177,18 +162,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          className="hero-scroll relative z-10 flex flex-col items-center gap-2 pb-10"
-          style={{ opacity: 0 }}
-        >
-          <span className="text-[10px] font-mono text-muted uppercase tracking-widest">scroll</span>
-          <div
-            className="hero-scroll-line w-px h-12 origin-top"
-            style={{ background: 'linear-gradient(to bottom, var(--color-ink), transparent)' }}
-          />
         </div>
       </section>
 

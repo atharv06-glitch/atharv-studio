@@ -28,20 +28,6 @@ export default function PageHero({ eyebrow, title, subtitle, ghostText }) {
           { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' },
           '-=0.4'
         )
-        .fromTo('.hero-scroll',
-          { opacity: 0 },
-          { opacity: 1, duration: 0.5, ease: 'power2.out' },
-          '-=0.2'
-        )
-
-      gsap.to('.hero-scroll-line', {
-        scaleY: 0.4,
-        duration: 1,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut',
-        transformOrigin: 'top center',
-      })
     }, heroRef)
 
     return () => ctx.revert()
@@ -134,18 +120,6 @@ export default function PageHero({ eyebrow, title, subtitle, ghostText }) {
             )}
 
           </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          className="hero-scroll absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
-          style={{ opacity: 0 }}
-        >
-          <span className="text-[10px] font-mono text-muted uppercase tracking-widest hidden md:block">scroll</span>
-          <div
-            className="hero-scroll-line w-px h-10 md:h-12 origin-top"
-            style={{ background: 'linear-gradient(to bottom, var(--color-ink), transparent)' }}
-          />
         </div>
       </section>
     </div>
