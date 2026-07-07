@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { label: 'Contact', href: '/contact' },
 ]
 
-const CTA_LINK = 'https://wa.me/+919529085991?text=Hi%20Atharv,%20I%27d%20like%20to%20talk%20about%20a%20project.'
+const CTA_LINK = 'https://wa.me/+918623035107?text=Hi%20Atharv,%20I%27d%20like%20to%20talk%20about%20a%20project.'
 
 export default function Navbar() {
   const navRef = useRef(null)
@@ -49,7 +49,7 @@ export default function Navbar() {
         ref={navRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-surface/85 backdrop-blur-xl border-b border-bdr shadow-sm'
+            ? 'bg-bgc/85 backdrop-blur-xl border-b border-bdr shadow-sm'
             : 'bg-transparent'
         }`}
       >
@@ -143,8 +143,8 @@ export default function Navbar() {
         </div>
         {/* Contact Info at bottom */}
         <div className="mt-8 flex flex-col items-center gap-3">
-          <a href="tel:+1-212-456-7890" className="text-muted hover:text-ink transition-colors duration-200">+1-212-456-7890</a>
-          <a href="mailto:hello@atharvstudio.com" className="font-bold text-ink hover:text-accent transition-colors duration-200">hello@atharvstudio.com</a>
+          <a href="tel:+918623035107" className="text-muted hover:text-ink transition-colors duration-200">+91 8623035107</a>
+          <a href="mailto:amaanbagwan027@gmail.com" className="font-bold text-ink hover:text-accent transition-colors duration-200">amaanbagwan027@gmail.com</a>
         </div>
       </div>
     </>

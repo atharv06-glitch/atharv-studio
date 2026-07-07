@@ -67,17 +67,17 @@ export default function CtaSection() {
 
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center lg:items-stretch xl:items-center gap-4 pt-2 w-full">
               <a
-                href="mailto:hello@atharvstudio.com"
+                href="mailto:amaanbagwan027@gmail.com"
                 className="inline-flex items-center justify-center gap-2 bg-white text-accent px-8 py-3.5 rounded-full text-xs font-bold hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-300 group"
               >
                 Book a Free Call
                 <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
               </a>
               <a
-                href="mailto:hello@atharvstudio.com"
+                href="mailto:amaanbagwan027@gmail.com"
                 className="inline-flex items-center justify-center gap-2 border border-bdr text-ink px-8 py-3.5 rounded-full text-xs font-semibold hover:border-accent hover:text-accent transition-all duration-300"
               >
-                hello@atharvstudio.com
+                amaanbagwan027@gmail.com
               </a>
             </div>
             

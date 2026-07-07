@@ -8,9 +8,6 @@ import Footer from './components/layout/Footer'
 import CustomCursor from './components/ui/CustomCursor'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
-import DocsPage from './pages/DocsPage'
-import SignInPage from './pages/SignInPage'
-import SignUpPage from './pages/SignUpPage'
 import ServicesPage from './pages/ServicesPage'
 import PortfolioPage from './pages/PortfolioPage'
 import ProcessPage from './pages/ProcessPage'
@@ -35,10 +32,7 @@ export default function App() {
               <Route path="/portfolio" element={<PageTransition><PortfolioPage /></PageTransition>} />
               <Route path="/services" element={<PageTransition><ServicesPage /></PageTransition>} />
               <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
-              <Route path="/docs" element={<PageTransition><DocsPage /></PageTransition>} />
               <Route path="/process" element={<PageTransition><ProcessPage /></PageTransition>} />
-              <Route path="/sign-in" element={<PageTransition><SignInPage /></PageTransition>} />
-              <Route path="/sign-up" element={<PageTransition><SignUpPage /></PageTransition>} />
               <Route path="/portfolio/:id" element={<PageTransition><ProjectDetailsPage /></PageTransition>} />
               <Route path="*" element={<PageTransition><NotFoundPage /></PageTransition>} />
             </Routes>

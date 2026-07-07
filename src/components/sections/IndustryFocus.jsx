@@ -22,7 +22,7 @@ const INDUSTRIES = [
     title: 'Healthcare',
     desc: 'Trustworthy, accessible platforms for patients and providers.',
     icon: HeartPulse,
-    img: 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb3?q=80&w=1200&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Hospitality',

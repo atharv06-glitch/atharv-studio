@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'What is the cost of a project?',
-    a: 'We operate on a transparent, flat-rate monthly subscription model or provide upfront, fixed project quotes. There are no hidden fees, scope-creep surcharges, or hourly surprises. Explore our pricing plans or book a free call to get a tailored estimate.',
+    a: 'We operate on a transparent, flat-rate monthly subscription model or provide upfront, fixed project quotes. There are no hidden fees, scope-creep surcharges, or hourly surprises. Book a free call to get a tailored estimate.',
   },
   {
     q: 'Do you provide ongoing support after project completion?',
