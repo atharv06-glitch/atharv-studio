@@ -24,12 +24,12 @@ export const PROJECTS = [
   { 
     id: 3, 
     title: 'Greenvale', 
-    type: 'Corporate / Real Estate', 
-    img: 'https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2000&auto=format&fit=crop',
-    overview: 'A professional online presence built for Greenvale, focusing on clear communication and detailed project showcasing.',
+    type: 'E-commerce / Eco-Products', 
+    img: 'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?q=80&w=2000&auto=format&fit=crop',
+    overview: 'A sustainable e-commerce platform built for Greenvale, designed to showcase their premium eco-friendly paper dishes, biodegradable cups, and sustainable packaging.',
     client: 'Greenvale',
     year: '2026',
-    services: ['Web Design', 'CMS Integration'],
+    services: ['E-commerce Development', 'UI/UX Design'],
     link: 'https://greenvale.in/'
   },
   { 
