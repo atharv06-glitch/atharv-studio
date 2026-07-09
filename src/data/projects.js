@@ -32,17 +32,7 @@ export const PROJECTS = [
     services: ['E-commerce Development', 'UI/UX Design'],
     link: 'https://greenvale.in/'
   },
-  { 
-    id: 4, 
-    title: 'Elite Experience', 
-    type: 'Luxury / Services', 
-    img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2000&auto=format&fit=crop',
-    overview: 'A high-end digital platform designed for Elite Experience, tailored to attract premium clients and outline luxury services.',
-    client: 'Elite Experience',
-    year: '2026',
-    services: ['UI/UX Design', 'Web Development'],
-    link: 'https://eliteexperience.in'
-  },
+
   // --- Manufacturing ---
   {
     id: 5,
