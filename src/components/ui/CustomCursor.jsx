@@ -10,6 +10,10 @@ export default function CustomCursor() {
     const ring = ringRef.current
     if (!dot || !ring) return
 
+    // Only run on devices with a fine pointer (like a mouse)
+    if (!window.matchMedia('(pointer: fine)').matches) return
+
+
     /* ── FIX: quickTo needs one axis per call, not a 'css' object ── */
     const dotX  = gsap.quickTo(dot,  'left', { duration: 0.08, ease: 'none' })
     const dotY  = gsap.quickTo(dot,  'top',  { duration: 0.08, ease: 'none' })
@@ -62,6 +66,7 @@ export default function CustomCursor() {
     <>
       <div
         ref={dotRef}
+        className="custom-cursor-el"
         style={{
           position: 'fixed', zIndex: 9999, pointerEvents: 'none',
           width: 8, height: 8, borderRadius: '50%',
@@ -72,6 +77,7 @@ export default function CustomCursor() {
       />
       <div
         ref={ringRef}
+        className="custom-cursor-el"
         style={{
           position: 'fixed', zIndex: 9998, pointerEvents: 'none',
           width: 34, height: 34, borderRadius: '50%',

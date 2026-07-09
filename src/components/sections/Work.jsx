@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 import { Link } from 'react-router-dom'
 import { PROJECTS } from '../../data/projects'
 
-export default function Work() {
+export default function Work({ showAll = false }) {
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Work() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {PROJECTS.slice(0, 4).map((p, i) => (
+          {(showAll ? PROJECTS : PROJECTS.slice(0, 4)).map((p, i) => (
             <Link 
               to={`/portfolio/${p.id}`}
               key={p.id} 
@@ -68,18 +68,20 @@ export default function Work() {
           ))}
         </div>
 
-        <div className="mt-16 lg:mt-24 flex justify-center">
-          <Link
-            to="/portfolio"
-            className="inline-flex items-center gap-2 border border-bdr bg-surface text-ink px-8 py-4 rounded-full text-sm font-semibold hover:border-accent hover:text-accent transition-all duration-300"
-          >
-            Explore More
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </Link>
-        </div>
+        {!showAll && (
+          <div className="mt-16 lg:mt-24 flex justify-center">
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-2 border border-bdr bg-surface text-ink px-8 py-4 rounded-full text-sm font-semibold hover:border-accent hover:text-accent transition-all duration-300"
+            >
+              Explore More
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </Link>
+          </div>
+        )}
 
       </div>
     </section>

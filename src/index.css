@@ -64,8 +64,20 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ─── Custom cursor: hide native ─── */
-  * { cursor: none !important; }
+  /* ─── Custom cursor: hide native only on desktop ─── */
+  @media (hover: hover) and (pointer: fine) {
+    * { cursor: none !important; }
+  }
+}
+
+/* ─── Custom Cursor Visibility ─── */
+.custom-cursor-el {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-el {
+    display: block;
+  }
 }
 
 /* ─── Ghost text outline ─── */

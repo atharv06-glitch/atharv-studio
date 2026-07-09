@@ -12,7 +12,7 @@ export default function PortfolioPage() {
         subtitle="Each project blends design, development, and strategy to create experiences that feel polished and perform beautifully."
         ghostText="PORTFOLIO"
       />
-      <Work />
+      <Work showAll={true} />
     </main>
   )
 }
