@@ -1,11 +1,12 @@
 import { useParams, Link } from 'react-router-dom'
 import { PROJECTS } from '../data/projects'
+import { DEMOS } from '../data/demos'
 import { useEffect } from 'react'
 import SEO from '../components/ui/SEO'
 
 export default function ProjectDetailsPage() {
   const { id } = useParams()
-  const project = PROJECTS.find(p => p.id === parseInt(id))
+  const project = PROJECTS.find(p => p.id === parseInt(id)) || DEMOS.find(p => p.id === id)
 
   useEffect(() => {
     window.scrollTo(0, 0)

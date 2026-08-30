@@ -26,7 +26,7 @@ export default function Preloader({ onComplete }) {
       const obj = { value: 0 }
       tl.to(obj, {
         value: 100,
-        duration: 2,
+        duration: 0.6,
         ease: 'power3.inOut',
         onUpdate: () => setProgress(Math.round(obj.value))
       })
@@ -34,9 +34,9 @@ export default function Preloader({ onComplete }) {
       // Exit animation
       tl.to(containerRef.current, {
         yPercent: -100,
-        duration: 0.8,
+        duration: 0.6,
         ease: 'power4.inOut',
-        delay: 0.2
+        delay: 0.1
       })
     }, containerRef)
 

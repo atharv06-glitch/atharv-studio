@@ -79,7 +79,7 @@ export default function Approach() {
         <div className="flex-1 w-full flex justify-center lg:justify-end philosophy-img-container">
           <div className="relative rounded-3xl overflow-hidden w-full max-w-md aspect-square shadow-2xl">
             <img 
-              src="/philosophy_image.png" 
+              src="/philosophy_image.webp" 
               alt="Philosophy" 
               className="philosophy-img w-full h-full object-cover rounded-2xl"
             />

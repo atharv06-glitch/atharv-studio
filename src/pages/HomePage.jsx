@@ -7,6 +7,7 @@ import IndustryFocus from '../components/sections/IndustryFocus'
 import CoreValues from '../components/sections/CoreValues'
 import Faq from '../components/sections/Faq'
 import CtaSection from '../components/sections/CtaSection'
+import DemoProjects from '../components/sections/DemoProjects'
 import SEO from '../components/ui/SEO'
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Services />
       <Process />
       <Work />
+      <DemoProjects />
       <CoreValues />
       <IndustryFocus />
       <Faq />
