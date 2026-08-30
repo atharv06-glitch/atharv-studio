@@ -6,7 +6,7 @@ import { DEMOS } from '../../data/demos'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function DemoProjects() {
+export default function DemoProjects({ hideHeader = false }) {
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -38,19 +38,21 @@ export default function DemoProjects() {
     <section ref={containerRef} id="demos" className="py-24 lg:py-40 bg-surface border-t border-bdr">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
-        <div className="mb-16 lg:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div>
-            <span className="bg-ink text-bgc px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-semibold inline-block mb-6">
-              Live Previews
-            </span>
-            <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-ink">
-              Client Demo Projects.
-            </h2>
+        {!hideHeader && (
+          <div className="mb-16 lg:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <span className="bg-ink text-bgc px-4 py-1.5 rounded-full text-xs uppercase tracking-wider font-semibold inline-block mb-6">
+                Live Previews
+              </span>
+              <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-ink">
+                Client Demo Projects.
+              </h2>
+            </div>
+            <p className="max-w-sm text-text font-mono text-sm uppercase tracking-wider">
+              Explore our high-performance, premium landing pages designed specifically for various industries.
+            </p>
           </div>
-          <p className="max-w-sm text-text font-mono text-sm uppercase tracking-wider">
-            Explore our high-performance, premium landing pages designed specifically for various industries.
-          </p>
-        </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {DEMOS.map((p, i) => (

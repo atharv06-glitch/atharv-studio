@@ -8,11 +8,11 @@ export default function DemosPage() {
       <SEO title="Live Demos" description="Explore our interactive premium landing pages." />
       <PageHero 
         eyebrow="Live Previews"
-        title="Interactive Client Demonstrations"
+        title="Interactive Demos"
         subtitle="Explore our collection of high-performance, industry-specific landing pages designed to convert."
         ghostText="DEMOS"
       />
-      <DemoProjects />
+      <DemoProjects hideHeader={true} />
     </main>
   )
 }
