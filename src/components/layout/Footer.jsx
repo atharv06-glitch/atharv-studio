@@ -54,17 +54,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-widest text-inverted-text/60 mb-5">Get in Touch</h4>
-            <a href="mailto:amaanbagwan027@gmail.com" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
-              <Mail className="w-4 h-4 shrink-0" />
-              <span>amaanbagwan027@gmail.com</span>
-            </a>
             <a href="mailto:jangamatharv93@gmail.com" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
               <Mail className="w-4 h-4 shrink-0" />
               <span>jangamatharv93@gmail.com</span>
             </a>
-            <a href="tel:+918623035107" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
+            <a href="tel:+918010627155" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200 mb-3">
               <Phone className="w-4 h-4 shrink-0" />
-              <span>+91 8623035107</span>
+              <span>+91 8010627155</span>
             </a>
             <a href="tel:+919359492394" className="flex items-center gap-2 text-sm text-inverted-text/80 hover:text-[var(--color-bg-base)] transition-colors duration-200">
               <Phone className="w-4 h-4 shrink-0" />

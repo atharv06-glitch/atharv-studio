@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: 'Contact', href: '/contact' },
 ]
 
-const CTA_LINK = 'https://wa.me/+918623035107?text=Hi%20Atharv,%20I%27d%20like%20to%20talk%20about%20a%20project.'
+const CTA_LINK = 'https://wa.me/+918010627155?text=Hi%20Atharv,%20I%27d%20like%20to%20talk%20about%20a%20project.'
 
 export default function Navbar() {
   const navRef = useRef(null)
@@ -144,8 +144,8 @@ export default function Navbar() {
         </div>
         {/* Contact Info at bottom */}
         <div className="mt-8 flex flex-col items-center gap-3">
-          <a href="tel:+918623035107" className="text-muted hover:text-ink transition-colors duration-200">+91 8623035107</a>
-          <a href="mailto:amaanbagwan027@gmail.com" className="font-bold text-ink hover:text-accent transition-colors duration-200">amaanbagwan027@gmail.com</a>
+          <a href="tel:+918010627155" className="text-muted hover:text-ink transition-colors duration-200">+91 8010627155</a>
+          <a href="mailto:jangamatharv93@gmail.com" className="font-bold text-ink hover:text-accent transition-colors duration-200">jangamatharv93@gmail.com</a>
         </div>
       </div>
     </>
